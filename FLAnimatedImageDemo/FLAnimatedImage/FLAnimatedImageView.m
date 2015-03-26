@@ -64,6 +64,10 @@
         if (self.shouldAnimate) {
             [self startAnimating];
         }
+        if (animatedImage)
+        {
+            self.contentScaleFactor = animatedImage.posterImage.scale;
+        }
         
         [self.layer setNeedsDisplay];
     }
