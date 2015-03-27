@@ -172,7 +172,7 @@ static NSHashTable *allAnimatedImagesWeak;
 
 - (instancetype)initWithAnimatedGIFData:(NSData *)data
 {
-    return [[FLAnimatedImage alloc] initWithAnimatedGIFData:data withScale:1.0f];
+    return [self initWithAnimatedGIFData:data withScale:1.0f];
 }
 
 - (instancetype)initWithAnimatedGIFData:(NSData *)data withScale:(CGFloat)scale {
