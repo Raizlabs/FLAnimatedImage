@@ -156,6 +156,10 @@
     super.image = image;
 }
 
+- (void)setShouldAnimateExternally:(BOOL)shouldAnimateExternally {
+    _shouldAnimateExternally = shouldAnimateExternally;
+    [self updateShouldAnimate];
+}
 
 #pragma mark Animating Images
 
