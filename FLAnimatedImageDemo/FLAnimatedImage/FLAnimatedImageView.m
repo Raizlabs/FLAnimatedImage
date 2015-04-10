@@ -161,7 +161,7 @@
 
 - (void)startAnimating
 {
-    if (self.animatedImage) {
+    if (self.animatedImage && self.shouldAnimateExternally) {
         // Lazily create the display link.
         if (!self.displayLink) {
             // It is important to note the use of a weak proxy here to avoid a retain cycle. `-displayLinkWithTarget:selector:`
@@ -231,7 +231,7 @@
 // Just update our cached value whenever the animated image, window or superview is changed.
 - (void)updateShouldAnimate
 {
-    self.shouldAnimate = self.animatedImage && self.window && self.superview;
+    self.shouldAnimate = self.animatedImage && self.window && self.superview && self.shouldAnimateExternally;
 }
 
 
